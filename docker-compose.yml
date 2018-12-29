@@ -1,0 +1,15 @@
+version: "3.2"
+services:
+  centos:
+    build: ./
+    ports:
+      - "22:22"
+      - "443:443"
+      - "80:80"
+      - "3306:3306"
+    volumes:
+    - d:/website/homework/:/mnt/homework/
+    container_name: centos-odp
+
+
+
