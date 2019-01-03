@@ -8,7 +8,11 @@ services:
       - "80:80"
       - "3306:3306"
     volumes:
-    - d:/website/homework/:/mnt/homework/
+    - ../homework/:/mnt/homework/
+    - ./sudoers:/etc/sudoers
+    - ../project/:/project/
+    command:
+      bash -c "/etc/init.d/sshd start && tail -f /dev/null"
     container_name: centos-odp
 
 
